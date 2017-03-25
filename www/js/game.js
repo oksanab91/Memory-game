@@ -18,7 +18,7 @@
  * under the License.
  */
 
-
+//variables
 var stage = null; 
 var renderer = null;
 var ratio = 320 / 480;
@@ -80,7 +80,6 @@ var gameProcess = {
         }); //window.innerWidth, window.innerHeight
         
         //backgroundColor: '0xff0000' //'0x1e3d7b' //'0x86D06F'
-
         
 
         // stage.width = renderer.width;
@@ -117,13 +116,24 @@ var gameProcess = {
         // use callback
 		
         //"https:///github.com//oksanab91//memoryGame//tree//master//www//img//shapeSheet.json"
+//https://github.com/oksanab91/Memory-game/raw/master/www/img/shapeSheet.json
 
-        //loader.add("../img/shapeSheet.json").once('complete', this.gameSetup.bind(this)).load(); //this.gameSetup
-        loader.add({name: "shapeSheet.json", url: "https://github.com/oksanab91/Memory-game/raw/master/www/img/shapeSheet.json", crossOrigin: true})
+       //??? loader.add("../img/shapeSheet.json").once('complete', this.gameSetup.bind(this)).load(); //this.gameSetup
+
+
+        loader.add({name: "shapeSheet.json", url: "https://raw.githubusercontent.com/oksanab91/memoryGame/master/www/img/shapeSheet.json", crossOrigin: true})
         .once("complete", this.gameSetup.bind(this)).load(); //this.gameSetup
 
 		//loader.add("http://localhost:8080/img/shapeSheet.png").once('complete', this.gameSetup.bind(this)).load(); //this.gameSetup
 		
+        // try{
+        //     loader.add({key: "shapesjson", value: jsondata, url: "https://github.com/oksanab91/Memory-game/blob/master/www/shapeSheet.json"})
+        //     .once('complete', this.gameSetup.bind(this)).load();
+
+        // }catch(e){
+        //     alert(e.message);
+        // }        
+
         return this;
     },
 
