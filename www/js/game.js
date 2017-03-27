@@ -118,11 +118,11 @@ var gameProcess = {
         //"https:///github.com//oksanab91//memoryGame//tree//master//www//img//shapeSheet.json"
 //https://github.com/oksanab91/Memory-game/raw/master/www/img/shapeSheet.json
 
-       //??? loader.add("../img/shapeSheet.json").once('complete', this.gameSetup.bind(this)).load(); //this.gameSetup
+       loader.add("shapeSheet.json").once('complete', this.gameSetup.bind(this)).load(); //this.gameSetup
 
 
-        loader.add({name: "shapeSheet.json", url: "https://raw.githubusercontent.com/oksanab91/memoryGame/master/www/img/shapeSheet.json", crossOrigin: true})
-        .once("complete", this.gameSetup.bind(this)).load(); //this.gameSetup
+        //loader.add({name: "shapeSheet.json", url: "https://raw.githubusercontent.com/oksanab91/memoryGame/master/www/img/shapeSheet.json", crossOrigin: true})
+        //.once("complete", this.gameSetup.bind(this)).load(); //this.gameSetup
 
 		//loader.add("http://localhost:8080/img/shapeSheet.png").once('complete', this.gameSetup.bind(this)).load(); //this.gameSetup
 		
